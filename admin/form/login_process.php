@@ -22,4 +22,8 @@ if (isset($_POST['conecte'])) {
         exit();
     }
 }
+
+// $stmt = $con->prepare("SELECT * FROM `login` WHERE `username` = ? AND `password` = ?");
+// $stmt->bind_param("ss", $login, $password);
+// SELECT * FROM `login` WHERE `username` = '$login' AND `password` =' OR '1'='1'
 ?>

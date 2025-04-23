@@ -9,9 +9,9 @@ if(isset($_POST['supprime'])){
     $stmt->bind_param('i',$id);
     
     if ($stmt->execute()) {
-        $_SESSION['success'] = "Parcours supprimé avec succès.";
+        $_SESSION['success'] = "Message sent successfully";
     } else {
-        $_SESSION['error'] = "Erreur lors de la suppression.";
+        $_SESSION['error'] = "Erreur";
     }
 
     header("Location: ../pages/contacte.php");

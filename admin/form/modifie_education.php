@@ -16,7 +16,7 @@ if (isset($_POST['ajoute'])) {
     if ($stmt->execute()) {
         $_SESSION['success'] = "Ajout effectué avec succès.";
     } else {
-        $_SESSION['error'] = "Erreur lors de l'ajout : " . $stmt->error;
+        $_SESSION['error'] = "Error adding " . $stmt->error;
     }
 
     header("Location: ../pages/education.php");

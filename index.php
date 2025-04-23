@@ -128,7 +128,7 @@ include "forms/connexion.php";
         <div class="container">
           <div class="section-title">
             <h2>Resume</h2>
-            <p><a target="_blank" href="https://drive.google.com/file/d/1xx7Pu9LzgRsyPG8vUb9zRzCkLZTPAgxH/view?usp=share_link">Download resume</a></p>
+            <p><a target="_blank" href="admin/assets/pdf/<?= $data_About['cv']?>">Download resume</a></p>
           </div>
           <div class="row">
             <div class="col-lg-6" data-aos="fade-up">
@@ -209,10 +209,10 @@ include "forms/connexion.php";
             <?php while($data_testimonials = mysqli_fetch_assoc($result_testimonials)){ ?>
               <div class="swiper-slide">
                 <div class="testimonial-item" data-aos="fade-up">
-                  <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>kamal<i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
+                  <p><i class="bx bxs-quote-alt-left quote-icon-left"></i><?= $data_testimonials['texteTestimonials']?><i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
                   <img src="admin/assets/img/testimonials/<?= $data_testimonials['imageTestimonials']?>" class="testimonial-img" alt="" />
                   <h3><?= $data_testimonials['nomTestimonials']?></h3>
-                  <h4><?= $data_testimonials['texteTestimonials']?></h4>
+                  <h4><?= $data_testimonials['titreTestimonials']?></h4>
                 </div>
               </div>
               <?php }?>

@@ -59,7 +59,10 @@ $data = mysqli_fetch_assoc($result);
                 <tr><th>Site web</th><td><a href="<?= htmlspecialchars($data['Website']) ?>" target="_blank"><?= htmlspecialchars($data['Website']) ?></a></td></tr>
                 <tr><th>Ville</th><td><?= htmlspecialchars($data['city']) ?></td></tr>
                 <tr><th>À propos</th><td><?= nl2br(htmlspecialchars($data['texteAboute'])) ?></td></tr>
-                <tr><th>Contact</th><td><?= nl2br(htmlspecialchars($data['texetContact'])) ?></td></tr>
+                <tr><th>CV</th><td><a href="uploads/<?= htmlspecialchars($data['cv']) ?>" target="_blank">
+                <?= htmlspecialchars($data['cv']) ?>
+          </a></td></tr>
+
               </tbody>
             </table>
 
@@ -98,7 +101,7 @@ $data = mysqli_fetch_assoc($result);
             <div class="mb-3"><label>Site web</label><input type="url" name="Website" class="form-control" value="<?= $data['Website'] ?>" required></div>
             <div class="mb-3"><label>Ville</label><input type="text" name="city" class="form-control" value="<?= $data['city'] ?>" required></div>
             <div class="mb-3"><label>À propos</label><textarea name="texteAboute" class="form-control" required><?= $data['texteAboute'] ?></textarea></div>
-            <div class="mb-3"><label>Contact</label><textarea name="texetContact" class="form-control" required><?= $data['texetContact'] ?></textarea></div>
+            <div class="mb-3"><label>cv</label><input type="file" name="cv" accept=".pdf,.doc,.docx" class="form-control"></div>
             <div class="mb-3"><label>Image</label><input type="file" name="image" class="form-control"></div>
           </div>
           <div class="modal-footer">
